@@ -1,8 +1,10 @@
 "use strict";
 import express from 'express';
+import countries from './api/countryRoutes.js';
 const router = express.Router();
 
 router.use(express.static('public'));
+router.use('/countries', countries);
 
 router.get('/', (req, res) => {
 	res.render('pages/home', {
