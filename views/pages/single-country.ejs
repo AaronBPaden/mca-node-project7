@@ -1,0 +1,14 @@
+<%- include('../partials/header'); %>
+<main class="main container-fluid">
+	<div class="flag-box">
+		<img class="single-flag img-fluid" src="<%= data.media.flag %>" alt="<%= data.name %>">
+	</div>
+	<div class="info-box">
+	<h2>More information:</h2>
+	<p><b>Capital:</b> <%= data.capital %></p>
+	<p><b>Currency:</b> <%= data.currency %></p>
+	<p><b>Phone:</b> <%= data.phone %></p>
+	<p><b>Emblem:</b> <img class="emblem img-fulid" src="<%= data.media.emblem %>" alt="<%= data.name %>"></p>
+	</div>
+</main>
+<%- include('../partials/footer'); %>

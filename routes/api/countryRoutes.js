@@ -17,4 +17,17 @@ countries.get('/', (req, res) => {
 		});
 });
 
+countries.get('/:id', (req, res) => {
+	const id = parseInt(req.params.id);
+	fetch(`${API}/${id}`)
+		.then(res => res.json())
+		.then(data => {
+			res.render('pages/single-country', {
+				title: data.name,
+				name: data.name,
+				data
+			});
+		});
+});
+
 export default countries;
